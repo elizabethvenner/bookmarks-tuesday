@@ -1,0 +1,3 @@
+# describe Link do
+#
+# end
