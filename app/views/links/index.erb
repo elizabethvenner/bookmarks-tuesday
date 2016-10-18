@@ -1,9 +1,10 @@
 <html>
+<a href="/links/new">Add Link</a>
+<br>
 <ul id='links'>
   <% @links.each do |link| %>
   <li>
-    Title: <%= link.title %>
-    URL: <%= link.url %>
+    <%= link.title %>: <%= link.url %>
   </li>
   <% end %>
 </ul>
