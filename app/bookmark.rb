@@ -1,9 +1,13 @@
+ENV['RACK_ENV'] ||= 'development'
+
+require 'bundler'
+Bundler.require :default, ENV['RACK_ENV'].to_sym
+
 require 'sinatra/base'
 require_relative 'models/link'
 
+
 class Bookmarks < Sinatra::Base
-
-
 
   get '/links' do
     @links = Link.all
@@ -15,7 +19,7 @@ class Bookmarks < Sinatra::Base
   end
 
   post '/links' do
-    Link.create(title: params[:title], url: params[:url])
+    # Link.create(title: params[:title], url: params[:url])
     redirect '/links'
   end
 
