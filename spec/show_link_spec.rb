@@ -6,7 +6,7 @@ feature 'show links on homepage' do
     visit '/links'
     # expect(page.status_code).to eq 200
     within 'ul#links' do
-      expect(page).to have_content 'Title: link'
+      expect(page).to have_content 'link: example.com'
     end
   end
 end
