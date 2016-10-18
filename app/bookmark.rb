@@ -1,7 +1,5 @@
-ENV['RACK_ENV'] ||= 'development'
+ENV["RACK_ENV"] ||= "development"
 
-require 'bundler'
-Bundler.require :default, ENV['RACK_ENV'].to_sym
 
 require 'sinatra/base'
 require_relative 'models/link'
